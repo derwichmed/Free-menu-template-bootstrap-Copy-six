@@ -1,0 +1,117 @@
+body,html{
+    height: 100%;
+}
+body{
+    background-color: #f0f0f0
+}
+header{
+    background-image: linear-gradient(to bottom,#5f5f5f,#9c9c9c);
+    height: 48px;
+    background-color: #1fc8db;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+.menu img{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px
+}
+.menu_item{
+    list-style: none;
+    display: inline-block;
+    padding-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-right: 20px
+}
+.menu_item:hover{
+    border-bottom: white 2px solid
+}
+.sub_menu{
+    width: 500px;
+    position: absolute;
+    list-style: none;
+    padding: 2px;
+    background-color: white;
+    margin-top: 15px;
+    text-align: left
+}
+.menu_item:last-child > .sub_menu{
+    right: 39%
+}
+.sub_menu_item{
+    min-height: 50px;
+    border-bottom: #9a9a9a 1px solid;
+    padding-top: 12px;
+    padding-left: 5px;
+    color: #9a9a9a;
+    cursor: pointer
+}
+.sub_menu_item p{
+    color: black;
+    font-size: 10px;
+    text-decoration: none
+}
+.sub_menu_item:hover{
+    background-color: skyblue;
+    color: white;
+    text-decoration: white solid underline
+}
+.sub_menu_item > .sub_menu{
+    left: 101%;
+    
+}
+.nav_bar_menu{
+    height: 48px;
+    background-color: #1fc8db;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    width: 100%;
+    padding-top: 5px;
+    color: white;
+    display: none
+}
+.nav_bar_menu > img{
+    width: 50px;
+    height: 35px;
+    cursor: pointer;
+    float: left
+}
+.nav_bar_menu h2{
+    text-align: center
+}
+@media(max-width: 500px){
+    .menu{
+        position: fixed;
+        z-index: 5000;
+        left: 0px;
+        top: 50px;
+        background-color: #5f5f5f;
+        width: 95%;
+        display: none
+    }
+    .menu_item{
+        display: block;
+        text-align: left;
+        margin: 0px
+    }
+    .nav_bar_menu{
+        display: block
+    }
+    
+    .sub_menu{
+        width: 100%;
+        position: relative;
+        padding: 2px;
+        background-color: white;
+        text-align: left;
+    }
+    .menu_item:last-child > .sub_menu{
+        width: 100%;
+        position: relative;
+        padding: 2px;
+        background-color: white;
+        text-align: left;
+        right: 0
+    }
+}
